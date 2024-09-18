@@ -45,12 +45,9 @@ public struct Slide: NavigationTransition {
 				let angle = 70.0
             			let offset = 150.0
 				OnInsertion {
-                			ZPosition(1)
                 			Offset(x: offset)
-                			Opacity()
 				}
 				OnRemoval {
-                			Rotate(.degrees(angle))
                 			Offset(x: -offset)
 				}
 			}
