@@ -43,12 +43,10 @@ public struct Slide: NavigationTransition {
 		case .horizontal:
 			MirrorPush {
 				OnInsertion {
-					Offset(x: 100)
-					Scale(1.15)
+					Move(edge: .trailing)
 				}
 				OnRemoval {
-					Offset(x: -100)
-					Scale(0.85)
+					Move(edge: .leading)
 				}
 			}
 		case .vertical:
