@@ -42,11 +42,18 @@ public struct Slide: NavigationTransition {
 		switch axis {
 		case .horizontal:
 			MirrorPush {
+				let angle = 70.0
+            			let offset = 150.0
 				OnInsertion {
-					Move(edge: .trailing)
+                			ZPosition(1)
+                			Rotate(.degrees(-angle))
+                			Offset(x: offset)
+                			Opacity()
+                			Scale(0.5)
 				}
 				OnRemoval {
-					Move(edge: .leading)
+                			Rotate(.degrees(angle))
+                			Offset(x: -offset)
 				}
 			}
 		case .vertical:
