@@ -44,11 +44,11 @@ public struct Slide: NavigationTransition {
 			MirrorPush {
 				OnInsertion {
 					Move(edge: .trailing)
-					Opacity(0.25)
+					Opacity()
 				}
 				OnRemoval {
 					Move(edge: .leading)
-					Opacity(0.25)
+					Opacity()
 				}
 			}
 		case .vertical:
